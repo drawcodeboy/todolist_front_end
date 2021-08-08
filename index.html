@@ -4,28 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <title>TO DO LIST</title>
   </head>
   <body>
-    <header class="head">
-      <div class="head__title">
-        <h1>To Do List</h1>
+    <div class="container">
+      <div class="image"></div>
+      <div class="title"><h2>To Do List</h2></div>
+      <div class="list">
+        <ul id="list">
+          <li>
+            Study
+            <button id="delete-button">X</button>
+          </li>
+        </ul>
       </div>
-      <div>
-        <input
-          type="text"
-          placeholder="할 일을 적으세요"
-          class="head__input"
-          id="input"
-          size="80"
-        />
-        <button id="button">+</button>
+      <div class="add-item">
+        <input type="text" id="input" placeholder="Add To Do" />
+
+        <button id="add-button">+</button>
       </div>
-    </header>
-    <ul id="list">
-      <li>Hello World</li>
-    </ul>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>

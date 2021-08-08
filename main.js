@@ -1,16 +1,33 @@
-let button = document.getElementById('button');
-let input = document.getElementById('input');
-let list = document.getElementById('list');
+'use strict';
 
-button.addEventListener('click',clickButton);
-//target.addEventListenet(type, listener);
-// type = 반응할 이벤트 유형을 나타내는 문자열
-// listener = 지정된 타입의 이벤트가 발생했을 때, 알림을 받는 객체
+const list = document.getElementById("list");
+const addBtn = document.getElementById("add-button");
+const input = document.getElementById("input");
 
-function clickButton(){
-    let temp = document.createElement('li');
-    temp.innerHTML = input.value;
-    list.appendChild(temp);
-    //node.appendChild();
-    //부모 노드의 자식 노드 리스트 중 마지막 자식으로 붙임
+addBtn.addEventListener("click", clickBtn);
+
+function clickBtn(){
+    //li라는 변수에 "li" element를 만들어 대입한다
+    //delBtn이라는 변수에 "button" element를 만들어 대입한다
+    const li = document.createElement("li");
+    const delBtn = document.createElement("button");
+
+    //li라는 요소에 들어가는 Text는 input에 적은 value를 넣는다.
+    li.innerText = input.value;
+    //button이라는 요소에는 X라는 text를 넣어준다.
+    delBtn.innerText = "X";
+
+    //list라는 변수 (ul)의 자식(child)에 li와 delBtn을 넣어준다.
+    list.appendChild(li);
+    list.appendChild(delBtn);
+
+    //delBtn을 click했을 때 delClick이라는 함수를 실행시킨다.
+    delBtn.addEventListener("click", delClick);
+
+    //input에 값을 아무 것도 없도록 초기화 시킨다.
+    input.value = "";
+}
+
+function delClick(){
+
 }
